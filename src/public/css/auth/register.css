@@ -54,7 +54,7 @@ body {
 }
 
 .form__group--submit {
-    background: linear-gradient(to right, #a4a7e1, #ffabd9);
+    background: linear-gradient(to right, #a3a6e1, #ffabd9);
     border: none;
     border-radius: 10px;
     width: 100%;
