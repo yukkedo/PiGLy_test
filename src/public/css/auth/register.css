@@ -1,0 +1,71 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #c5cef8, #ffddf5, #ffbccd, #febeb8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register__form {
+    background: #ffffff;
+    width: 40%;
+    border-radius: 15px;
+    padding: 20px 30px;
+}
+
+.form__title {
+    line-height: 30px;
+    text-align: center;
+}
+
+.form__title h1 {
+    font-family: Century;
+    color: #ec87ef;
+    font-weight: normal;
+    font-size: 50px;
+}
+
+.form__title h2 {
+    font-family: "Yu Mincho";
+    font-weight: normal;
+}
+
+.form__group--title {
+    padding-bottom: 10px;
+}
+
+.form__content--label {
+    font-weight: bold;
+}
+
+.form__group--item {
+    margin-bottom: 30px;
+}
+.form__content--input {
+    width: 100%;
+    height: 35px;
+}
+
+.form__button {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form__group--submit {
+    background: linear-gradient(to right, #a4a7e1, #ffabd9);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.form--link {
+    font-family: "Yu Mincho";
+    color: #2c99ff;
+}
