@@ -25,6 +25,7 @@
     border-radius: 5px;
     background-color: #f7f7f7;
     border: 1px solid #cdcdcd;
+    color: #333333;
     padding: 10px;
     height: 35px;
     width: 150px;
@@ -32,6 +33,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .header__button--setting:hover,

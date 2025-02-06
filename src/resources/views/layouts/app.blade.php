@@ -16,12 +16,14 @@
             PiGLy
         </div>
         <div class="header__button">
-            <button class="header__button--setting">
+            
+            <a class="header__button--setting" href="/weight_logs/goal_setting">
                 <img src="{{ asset('img/setting.png') }}" alt="歯車">目標体重設定
-            </button>
-            <button class="header__button--logout">
-                <img src="{{ asset('img/logout.png') }}" alt="ドア">ログアウト
-            </button>
+            </a>
+            <form class="logout__form" action="/logout" method="post">
+                @csrf
+                <button class="header__button--logout"><img src="{{ asset('img/logout.png') }}" alt="ドア">ログアウト</button>
+            </form>
         </div>
     </div>
 

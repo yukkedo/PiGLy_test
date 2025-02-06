@@ -16,13 +16,14 @@
             <h2>ログイン</h2>
         </div>
 
-        <form class="form__content" action="">
+        <form class="form__content" action="/login" method="post">
+            @csrf
             <div class="form__content--group">
                 <div class="form__group--title">
                     <label class="form__content--label">メールアドレス</label>
                 </div>
                 <div class="form__group--item">
-                    <input class="form__content--input" type="email" placeholder="メールアドレスを入力">
+                    <input class="form__content--input" type="email" name="email" value="{{ old('email') }}" placeholder="メールアドレスを入力">
                 </div>
                 <div class="form__group--error">
                     <p class="form__content--error" style="color: red">
@@ -35,7 +36,7 @@
                     <label class="form__content--label">パスワード</label>
                 </div>
                 <div class="form__group--item">
-                    <input class="form__content--input" type="password" placeholder="パスワードを入力">
+                    <input class="form__content--input" type="password" name="password" placeholder="パスワードを入力">
                 </div>
                 <div class="form__group--error">
                     <p class="form__content--error" style="color: red">
@@ -46,10 +47,10 @@
 
             <div class="form__button">
                 <div class="form__group--button">
-                    <button class="form__group--submit">ログイン</button>
+                    <button class="form__group--submit" type="submit">ログイン</button>
                 </div>
                 <div class="form__group--login">
-                    <a class="form--link" href="">アカウント作成はこちら</a>
+                    <a class="form--link" href="/register">アカウント作成はこちら</a>
                 </div>
             </div>
         </form>

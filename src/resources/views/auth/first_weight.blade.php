@@ -17,13 +17,14 @@
             <p>STEP2 体重データの登録</p>
         </div>
 
-        <form class="form__content" action="">
+        <form class="form__content" action="/register/step2" method="post">
+            @csrf
             <div class="form__content--group">
                 <div class="form__group--title">
                     <label class="form__content--label">現在の体重</label>
                 </div>
                 <div class="form__group--item">
-                    <input class="form__content--input" type="text" placeholder="現在の体重を入力">kg
+                    <input class="form__content--input" type="text" name="weight" value="{{ old('weight') }}" placeholder="現在の体重を入力">kg
                 </div>
                 <div class="form__group--error">
                     <p class="form__content--error" style="color: red">
@@ -36,7 +37,7 @@
                     <label class="form__content--label">目標の体重</label>
                 </div>
                 <div class="form__group--item">
-                    <input class="form__content--input" type="text" placeholder="目標の体重を入力">kg
+                    <input class="form__content--input" type="text" name="target_weight" value="{{ old('target_weight') }}" placeholder="目標の体重を入力">kg
                 </div>
                 <div class="form__group--error">
                     <p class="form__content--error" style="color: red">

@@ -10,19 +10,19 @@
         <div class="weight__goal--item">
             <span class="item--title">目標体重</span>
             <p class="item--number">
-                45.0 <span>kg</span>
+                {{ $target->target_weight}}<span>kg</span>
             </p>
         </div>
         <div class="weight__goal--item">
             <span class="item--title">目標まで</span>
             <p class="item--number">
-                -1.5 <span>kg</span>
+                {{ $diff > 0 ? '+' . $diff : $diff }}<span>kg</span>
             </p>
         </div>
         <div class="weight__goal--item">
             <span class="item--title">最新体重</span>
             <p class="item--number">
-                46.5 <span>kg</span>
+                {{ $weight->weight }}<span>kg</span>
             </p>
         </div>
     </div>
@@ -45,14 +45,17 @@
                     <th class="title--time">運動時間</th>
                     <th class="title--imag"></th>
                 </tr>
+                @foreach($logs as $log)
                 <tr class="row--data">
-                    <td class="title--date">2025/1/1</td>
-                    <td class="title--weight">kg</td>
-                    <td class="title--cal">cal</td>
-                    <td class="title--time"></td>
+                    <td class="title--date">{{ $log->date }}</td>
+                    <td class="title--weight">{{ $log->weight }}kg</td>
+                    <td class="title--cal">{{ $log->calories }}cal</td>
+                    <td class="title--time">{{ $log->exercise_time }}</td>
                     <td class="title--imag"><a href=""><img src="{{ asset('img/pen.png') }}" alt="ペン"></a></td>
                 </tr>
-                </table>
+                @endforeach
+            </table>
+            {{ $logs->links()}}
         </div>
     </div>
 </div>

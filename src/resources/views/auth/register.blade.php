@@ -17,13 +17,14 @@
             <p>STEP1 アカウント情報の登録</p>
         </div>
 
-        <form class="form__content" action="">
+        <form class="form__content" action="/register/step1" method="post">
+            @csrf
             <div class="form__content--group">
                 <div class="form__group--title">
                     <label class="form__content--label">お名前</label>
                 </div>
                 <div class="form__group--item">
-                    <input class="form__content--input" type="text" placeholder="名前を入力">
+                    <input class="form__content--input" type="text" name="name" placeholder="名前を入力" value="{{ old('name') }}">
                 </div>
                 <div class="form__group--error">
                     <p class="form__content--error" style="color: red">
@@ -36,7 +37,7 @@
                     <label class="form__content--label">メールアドレス</label>
                 </div>
                 <div class="form__group--item">
-                    <input class="form__content--input" type="email" placeholder="メールアドレスを入力">
+                    <input class="form__content--input" type="email" name="email" value="{{ old('email') }}" placeholder="メールアドレスを入力">
                 </div>
                 <div class="form__group--error">
                     <p class="form__content--error" style="color: red">
@@ -49,7 +50,7 @@
                     <label class="form__content--label">パスワード</label>
                 </div>
                 <div class="form__group--item">
-                    <input class="form__content--input" type="password" placeholder="パスワードを入力">
+                    <input class="form__content--input" type="password" name="password"  placeholder="パスワードを入力">
                 </div>
                 <div class="form__group--error">
                     <p class="form__content--error" style="color: red">
@@ -60,10 +61,10 @@
 
             <div class="form__button">
                 <div class="form__group--button">
-                    <button class="form__group--submit">次に進む</button>
+                    <button class="form__group--submit" type="submit">次に進む</button>
                 </div>
                 <div class="form__group--login">
-                    <a class="form--link" href="">ログインはこちら</a>
+                    <a class="form--link" href="/login">ログインはこちら</a>
                 </div>
             </div>
         </form>
